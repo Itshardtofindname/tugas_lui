@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Utama - Kebudayaan Indonesia</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #d3c4a9; /* Warna latar krem kayu */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Container tetap ramping ke samping (280px) dan memanjang ke bawah */
+        .menu-wrapper {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* Memberikan spasi lega antara judul dan list menu */
+            object-fit: cover;
+        }
+        
+        .menu-title {
+            background-color: #2e5bbf; /* Biru utama */
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 700;
+            font-size: 18px; /* Teks judul agak besar */
+            letter-spacing: 1px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+        }
+
+        /* Kotak menu disusun vertikal memanjang ke bawah dengan gap antar kotak */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Jarak/gap antar kotak menu agar tidak berhimpitan */
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #f1ebd8; /* Krem lembut */
+            border: 1px solid #bdae8b;
+            border-radius: 8px;
+            padding: 18px 20px; /* Padding tinggi (18px) agar per kotak tinggi & lega */
+            color: #2c251e;
+            text-decoration: none;
+            font-size: 17px; /* Teks agak gedean & jelas */
+            font-weight: 600;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.25s ease-in-out;
+            line-height: 1.2;
+        }
+
+        /* Ukuran emoji diperbesar dan diberi jarak terpisah */
+        .menu-item .icon {
+            font-size: 24px; /* Emoji besar */
+            margin-right: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            flex-shrink: 0;
+        }
+
+        /* Efek hover halus memanjang dan sedikit menaik */
+        .menu-item:hover {
+            background-color: #e5dcbe;
+            color: #1a3c88;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+            padding-left: 24px; /* Efek bergeser halus ke kanan */
+        }
+
+        .menu-item:active {
+            transform: translateY(0);
+            background-color: #d8ceab;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="menu-title">MENU UTAMA</div>
+
+        <div class="menu-list">
+            <a href="#" class="menu-item">
+                <span class="icon">🏠</span> HOME
+            </a>
+            <a href="#" class="menu-item">
+                <span class="icon">💃</span> TARIAN DAERAH
+            </a>
+            <a href="#" class="menu-item">
+                <span class="icon">🏯</span> RUMAH ADAT
+            </a>
+            <a href="#" class="menu-item">
+                <span class="icon">🧆</span> MAKANAN DAERAH
+            </a>
+            <a href="#" class="menu-item">
+                <span class="icon">⚔️</span> SENJATA DAERAH
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
