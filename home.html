@@ -3,41 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konten Awal</title>
+    <title>Home - Nusantara</title>
     <style>
         * {
             box-sizing: border-box;
-        }
-        html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            background-color: #ff0000; /* Merah penuh persis Figma */
         }
 
-        .container {
-            height: 100%;
-            display: flex;
-            align-items: center; /* Teks posisi pas di tengah kotak merah */
-            justify-content: center;
-            padding: 40px;
-        }
-
-        .text-content {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E7241A; 
             color: #ffffff;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 28px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: justify;
+        }
+
+        .content-box {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nusantara-text {
+            font-size: 24px;
             line-height: 1.6;
-            text-align: center;
             font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        /* Tombol About */
+        .about-btn {
+            background-color: #F9D06E; 
+            color: #000000;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 12px 35px;
+            border-radius: 8px;
+            border: 2px solid #000;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.1s ease;
+        }
+
+        .about-btn:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="text-content">
-Nusantara merupakan sebutan khas bagi kepulauan Indonesia yang menggambarkan keanekaragaman geografi, suku, bahasa, serta kekayaan budaya dari Sabang sampai Merauke. Sebagai wilayah kepulauan terbesar di dunia yang dihubungkan oleh lautan, Nusantara tidak hanya menyimpan potensi alam yang sangat melimpah, tetapi juga menjadi simpul peradaban dan perdagangan internasional sejak zaman dahulu. Nilai-nilai luhur seperti gotong royong dan semangat Bhinneka Tunggal Ika menjadi pilar utama yang menyatukan ratusan tradisi lokal ke dalam satu kesatuan bangsa yang kokoh, indah, dan penuh warna.        </div>
+    <div class="content-box">
+        <p class="nusantara-text">
+            Nusantara merupakan sebutan khas bagi kepulauan Indonesia yang menggambarkan keanekaragaman geografi, suku, bahasa, serta kekayaan budaya dari Sabang sampai Merauke. Sebagai wilayah kepulauan terbesar di dunia yang dihubungkan oleh lautan, Nusantara tidak hanya menyimpan potensi alam yang sangat melimpah, tetapi juga menjadi simpul peradaban dan perdagangan internasional sejak zaman dahulu. Nilai-nilai luhur seperti gotong royong dan semangat Bhinneka Tunggal Ika menjadi pilar utama yang menyatukan ratusan tradisi lokal ke dalam satu kesatuan bangsa yang kokoh, indah, dan penuh warna.
+        </p>
+
+        <a href="About.html" class="about-btn">About</a>
     </div>
 
 </body>

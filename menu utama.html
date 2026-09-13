@@ -10,20 +10,18 @@
         }
 
         html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* Nama file sudah disesuaikan dengan folder Gambar kamu: background menu.png */
-    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
-                url('Gambar/background menu.png') no-repeat center center/cover;
-    overflow: hidden;
-}
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+                        url('Gambar/background menu.png') no-repeat center center/cover;
+            overflow: hidden;
+        }
 
         .menu-wrapper {
             width: 100%;
@@ -32,34 +30,41 @@
             flex-direction: column;
             align-items: center;
             padding: 10px;
-            margin-top: -30px; /* Posisi menu dinaikkan ke atas */
+            margin-top: -20px;
         }
 
-        /* 1. KOTAK JUDUL "MENU UTAMA" (HEADER DENGAN PEMBEDA) */
-        .header-title {
+       
+        .header-title-btn {
             width: 100%;
-            background-color: #F9D06E; /* Warna kuning Figma */
+            background-color: #F9D06E;
             color: #000000;
-            font-weight: 900; /* Font paling tebal */
+            font-weight: 900;
             font-size: 24px;
             text-align: center;
+            text-decoration: none;
             padding: 20px 10px;
             border-radius: 10px;
-            border: 3px solid #000000; /* Garis tepi tebal sebagai pembeda */
+            border: 3px solid #000000;
             box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
-            cursor: default;
-            margin-bottom: 35px; /* Dijauhin dari tombol menu di bawahnya */
+            display: block;
+            margin-bottom: 25px;
+            cursor: pointer;
+            transition: transform 0.1s ease;
         }
 
-        /* Container untuk daftar pilihan menu */
+        .header-title-btn:hover {
+            transform: scale(1.03);
+        }
+
+        
         .menu-list {
-            width: 88%; /* Ukuran sedikit lebih kecil dari judul */
+            width: 88%;
             display: flex;
             flex-direction: column;
-            gap: 16px; /* Jarak antar tombol pilihan */
+            gap: 16px;
         }
 
-        /* 2. TOMBOL PILIHAN MENU (LEBIH KECIL & TIPIS) */
+        
         .btn-figma {
             background-color: #F9D06E;
             color: #000000;
@@ -83,10 +88,8 @@
 <body>
 
     <div class="menu-wrapper">
-        <!-- Header Utama (Di Atas + Pembeda Border Tebal) -->
-        <div class="header-title">Menu Utama</div>
+        <a href="home.html" target="konten" class="header-title-btn">Menu Utama</a>
 
-        <!-- Daftar Pilihan Menu (Lebih Kecil & Dijauhin) -->
         <div class="menu-list">
             <a href="tari daerah.html" target="konten" class="btn-figma">Tari Daerah</a>
             <a href="KULINER.html" target="konten" class="btn-figma">Makanan Daerah</a>

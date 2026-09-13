@@ -2,13 +2,88 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indonesia Culture</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 1. CONTAINER HEADER ATAS */
+        .header-container {
+            width: 100%;
+            height: 130px; /* Tinggi header */
+            border-bottom: 3px solid #000;
+        }
+
+        .header-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 2. CONTAINER UTAMA (KIRI & KANAN) */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: calc(100vh - 130px); /* Sisa tinggi layar untuk isi */
+        }
+
+        /* KOLOM KIRI (MENU UTAMA) */
+        .left-menu {
+            width: 320px;
+            height: 100%;
+            border-right: 3px solid #000;
+        }
+
+        .left-menu iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* KOLOM KANAN (KONTEN HASIL KLIK MENU) */
+        .right-content {
+            flex: 1;
+            height: 100%;
+            background-color: #E7241A; /* Warna merah latar kanan */
+        }
+
+        .right-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
-<frameset rows="27%,*" border="0" frameborder="0">
-    <frame name="header" src="header.html" scrolling="no" noresize="noresize"></frame>
-    <frameset cols="28%,*">
-        <frame name="Menu" src="menu utama.html" noresize="noresize"></frame>
-        <frame name="konten" src="home.html"></frame>
-    </frameset>
-</frameset>
+<body>
+
+    <div class="header-container">
+        <iframe src="header.html"></iframe>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="left-menu">
+            <iframe src="menu utama.html"></iframe>
+        </div>
+
+        <div class="right-content">
+            <iframe src="home.html" name="konten"></iframe>
+        </div>
+
+    </div>
+
+</body>
 </html>
