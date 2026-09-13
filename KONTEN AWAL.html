@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>konten awal</title>
+    <title>Menu Utama</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            /* Pasang gambar background jika ada, atau gunakan warna latar Figma */
+            background-color: #d8af84; 
+            /* Jika punya file gambar background menu dari figma, aktifkan baris bawah: */
+            /* background-image: url('Gambar/bg-menu.jpg'); background-size: cover; */
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 20px 15px;
+            align-items: center;
+        }
+
+        .menu-btn {
+            width: 100%;
+            max-width: 260px;
+            background-color: #fce895; /* Warna kuning tombol sesuai Figma */
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #fcd868;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-    <h1>Konten Awal</h1>
+
+    <div class="menu-container">
+        <a href="home.html" target="konten" class="menu-btn">Menu Utama</a>
+        <a href="tari daerah.html" target="konten" class="menu-btn">Tari Daerah</a>
+        <a href="KULINER.html" target="konten" class="menu-btn">Makanan Daerah</a>
+        <a href="rumah_adat.html" target="konten" class="menu-btn">Rumah Adat</a>
+        <a href="senjata daerah.html" target="konten" class="menu-btn">Senjata Tradisional</a>
+    </div>
+
 </body>
 </html>

@@ -3,116 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Utama - Kebudayaan Indonesia</title>
+    <title>Menu Utama</title>
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
-        body {
-            background-color: #d3c4a9; /* Warna latar krem kayu */
-            font-family: 'Segoe UI', Arial, sans-serif;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            overflow: hidden;
-        }
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Nama file sudah disesuaikan dengan folder Gambar kamu: background menu.png */
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+                url('Gambar/background menu.png') no-repeat center center/cover;
+    overflow: hidden;
+}
 
-        /* Container tetap ramping ke samping (280px) dan memanjang ke bawah */
         .menu-wrapper {
-            width: 280px;
+            width: 100%;
+            max-width: 300px;
             display: flex;
             flex-direction: column;
-            gap: 16px; /* Memberikan spasi lega antara judul dan list menu */
-            object-fit: cover;
+            align-items: center;
+            padding: 10px;
+            margin-top: -30px; /* Posisi menu dinaikkan ke atas */
         }
-        
-        .menu-title {
-            background-color: #2e5bbf; /* Biru utama */
-            color: #ffffff;
-            padding: 16px 20px;
-            font-weight: 700;
-            font-size: 18px; /* Teks judul agak besar */
-            letter-spacing: 1px;
+
+        /* 1. KOTAK JUDUL "MENU UTAMA" (HEADER DENGAN PEMBEDA) */
+        .header-title {
+            width: 100%;
+            background-color: #F9D06E; /* Warna kuning Figma */
+            color: #000000;
+            font-weight: 900; /* Font paling tebal */
+            font-size: 24px;
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            text-transform: uppercase;
+            padding: 20px 10px;
+            border-radius: 10px;
+            border: 3px solid #000000; /* Garis tepi tebal sebagai pembeda */
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
+            cursor: default;
+            margin-bottom: 35px; /* Dijauhin dari tombol menu di bawahnya */
         }
 
-        /* Kotak menu disusun vertikal memanjang ke bawah dengan gap antar kotak */
+        /* Container untuk daftar pilihan menu */
         .menu-list {
+            width: 88%; /* Ukuran sedikit lebih kecil dari judul */
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Jarak/gap antar kotak menu agar tidak berhimpitan */
+            gap: 16px; /* Jarak antar tombol pilihan */
         }
 
-        .menu-item {
-            display: flex;
-            align-items: center;
-            background-color: #f1ebd8; /* Krem lembut */
-            border: 1px solid #bdae8b;
-            border-radius: 8px;
-            padding: 18px 20px; /* Padding tinggi (18px) agar per kotak tinggi & lega */
-            color: #2c251e;
+        /* 2. TOMBOL PILIHAN MENU (LEBIH KECIL & TIPIS) */
+        .btn-figma {
+            background-color: #F9D06E;
+            color: #000000;
+            font-weight: bold;
+            font-size: 17px;
+            text-align: center;
             text-decoration: none;
-            font-size: 17px; /* Teks agak gedean & jelas */
-            font-weight: 600;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.25s ease-in-out;
-            line-height: 1.2;
+            padding: 15px 10px;
+            border-radius: 10px;
+            display: block;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease;
         }
 
-        /* Ukuran emoji diperbesar dan diberi jarak terpisah */
-        .menu-item .icon {
-            font-size: 24px; /* Emoji besar */
-            margin-right: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            flex-shrink: 0;
-        }
-
-        /* Efek hover halus memanjang dan sedikit menaik */
-        .menu-item:hover {
-            background-color: #e5dcbe;
-            color: #1a3c88;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-            padding-left: 24px; /* Efek bergeser halus ke kanan */
-        }
-
-        .menu-item:active {
-            transform: translateY(0);
-            background-color: #d8ceab;
+        .btn-figma:hover {
+            transform: scale(1.03);
         }
     </style>
 </head>
 <body>
-    <div class="menu-wrapper">
-        <div class="menu-title">MENU UTAMA</div>
 
+    <div class="menu-wrapper">
+        <!-- Header Utama (Di Atas + Pembeda Border Tebal) -->
+        <div class="header-title">Menu Utama</div>
+
+        <!-- Daftar Pilihan Menu (Lebih Kecil & Dijauhin) -->
         <div class="menu-list">
-            <a href="#" class="menu-item">
-                <span class="icon">🏠</span> HOME
-            </a>
-            <a href="#" class="menu-item">
-                <span class="icon">💃</span> TARIAN DAERAH
-            </a>
-            <a href="#" class="menu-item">
-                <span class="icon">🏯</span> RUMAH ADAT
-            </a>
-            <a href="#" class="menu-item">
-                <span class="icon">🧆</span> MAKANAN DAERAH
-            </a>
-            <a href="#" class="menu-item">
-                <span class="icon">⚔️</span> SENJATA DAERAH
-            </a>
+            <a href="tari daerah.html" target="konten" class="btn-figma">Tari Daerah</a>
+            <a href="KULINER.html" target="konten" class="btn-figma">Makanan Daerah</a>
+            <a href="rumah_adat.html" target="konten" class="btn-figma">Rumah Adat</a>
+            <a href="senjata daerah.html" target="konten" class="btn-figma">Senjata Tradisional</a>
         </div>
     </div>
 
